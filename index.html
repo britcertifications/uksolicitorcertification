@@ -22,7 +22,7 @@
     .hero-img-wrap { position: relative; height: 280px; overflow: hidden; }
     .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .hero-carousel { display: flex; width: 300%; height: 100%; animation: carousel 12s infinite; }
-    .hero-carousel img { width: 33.333%; height: 100%; object-fit: cover; flex-shrink: 0; }
+    .hero-carousel img { width: 33.333%; height: 100%; object-fit: contain; flex-shrink: 0; }
     @keyframes carousel { 0%,30%{transform:translateX(0)} 33%,63%{transform:translateX(-33.333%)} 66%,96%{transform:translateX(-66.666%)} 100%{transform:translateX(0)} }
     .hero-text { background: var(--navy-light); padding: 3rem 2rem; }
     .hero-text h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.15; margin-bottom: 1rem; }
@@ -83,9 +83,9 @@
 <div class="hero">
   <div class="hero-img-wrap">
     <div class="hero-carousel">
-      <img src="https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/generated-media/638caa19-c1b2-48c2-97e7-7bd6f7e189b6-VrFZx3TLcC6EaCdVL8VycwskWiistR.png" alt="UK-qualified solicitor in Dubai reviewing legal documents" style="object-position: top;">
-      <img src="https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/generated-media/b47774c3-5ac4-4e02-9fad-386cdd3d7888-7e73MzclOsYqxmXPsAh4hryUhhmGkE.png" alt="Notary public stamping official document" style="object-position: 50% 15%;">
-      <img src="https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/generated-media/82f3c677-ee95-4797-a205-f2381e1f8dea-j3kMBsEgypzIBdJxn4J1fqouKknOLW.png" alt="UK solicitor reviewing documents in office" style="object-position: 50% 30%;">
+      <img src="https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/generated-media/638caa19-c1b2-48c2-97e7-7bd6f7e189b6-VrFZx3TLcC6EaCdVL8VycwskWiistR.png" alt="UK-qualified solicitor in Dubai reviewing legal documents">
+      <img src="https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/generated-media/b47774c3-5ac4-4e02-9fad-386cdd3d7888-7e73MzclOsYqxmXPsAh4hryUhhmGkE.png" alt="Notary public stamping official document">
+      <img src="https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/generated-media/82f3c677-ee95-4797-a205-f2381e1f8dea-j3kMBsEgypzIBdJxn4J1fqouKknOLW.png" alt="UK solicitor reviewing documents in office">
     </div>
   </div>
   <div class="hero-text">
