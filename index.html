@@ -56,6 +56,21 @@
     .why-text strong { color: var(--white); }
     .cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-family: var(--sans); font-weight: 700; padding: 0.75rem 2rem; border-radius: 100px; text-decoration: none; margin-top: 1.5rem; transition: background 0.2s; }
     .cta-btn:hover { background: var(--gold-hover); }
+.wa-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #ffffff; font-family: var(--sans); font-weight: 700; padding: 0.75rem 1.75rem; border-radius: 100px; text-decoration: none; margin-top: 1.5rem; margin-left: 0.75rem; transition: background 0.2s; vertical-align: top; }
+.wa-btn:hover { background: #1da851; }
+.wa-btn svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+.nav-actions { display: flex; align-items: center; gap: 0.6rem; }
+.nav-wa { display: inline-flex; align-items: center; gap: 0.4rem; background: #25D366; color: #fff; font-family: var(--sans); font-weight: 700; font-size: 0.9rem; padding: 0.5rem 1.1rem; border-radius: 100px; text-decoration: none; transition: background 0.2s; }
+.nav-wa:hover { background: #1da851; }
+.nav-wa svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 200; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.35); transition: transform 0.2s, background 0.2s; }
+.wa-float:hover { transform: scale(1.07); background: #1da851; }
+.wa-float svg { width: 32px; height: 32px; fill: #fff; }
+.wa-choice { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--border); }
+.wa-choice p { margin: 0; font-family: var(--sans); font-size: 0.95rem; }
+.wa-choice .wa-btn { margin-top: 0; margin-left: 0; }
+.form-intro { font-family: var(--sans); font-size: 0.9rem; margin-bottom: 1.25rem; }
+@media (max-width: 620px) { .nav-wa span { display: none; } .nav-wa { padding: 0.5rem 0.75rem; } .nav-brand { font-size: 0.8rem; } .wa-btn { margin-left: 0; } }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
     .service-card { background: var(--navy-light); border-radius: 12px; overflow: hidden; transition: transform 0.2s; }
     .service-card:hover { transform: translateY(-4px); }
@@ -98,7 +113,10 @@
 <body>
 <nav>
   <a href="#" class="nav-brand">UK Solicitor Certification · Dubai</a>
-  <a href="#contact" class="nav-cta">Contact Us</a>
+  <div class="nav-actions">
+<a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." class="nav-wa" target="_blank" rel="noopener" aria-label="Message us on WhatsApp" onclick="waClick('nav')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.463 3.488"/></svg><span>WhatsApp</span></a>
+<a href="#contact" class="nav-cta">Contact Us</a>
+</div>
 </nav>
 <div class="hero">
   <div class="hero-img-wrap">
@@ -121,6 +139,7 @@
     <p>We are a team of UK-qualified solicitors based in Dubai, regulated by the Solicitors Regulation Authority of England and Wales. We provide low cost certification, attestation and witnessing services to the standard your UK paperwork requires, with same-day turnaround in most cases.</p>
     <p><strong>Cash on collection. No retainer, no surprises.</strong></p>
     <a href="#contact" class="cta-btn">Contact Us</a>
+<a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." class="wa-btn" target="_blank" rel="noopener" onclick="waClick('why_section')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.463 3.488"/></svg><span>WhatsApp Us</span></a>
   </div>
   <div class="services-grid">
     <div class="service-card">
@@ -158,8 +177,9 @@
   <h2>How it works</h2>
   <p>Four short steps from first message to completed document. Same-day service is standard. Cash on collection.</p>
   <a href="#contact" class="cta-btn" style="margin-bottom:2rem;display:inline-block">Contact Us</a>
+<a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." class="wa-btn" target="_blank" rel="noopener" style="margin-bottom:2rem" onclick="waClick('process_section')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.463 3.488"/></svg><span>WhatsApp Us</span></a>
   <div class="process-steps">
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Send us a message</h3><p>Via the Contact Us tab. Briefly describe the document you need certified, attested or witnessed.</p></div></div>
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Send us a message</h3><p>Message us on WhatsApp, or use the contact form below. Briefly describe the document you need certified, attested or witnessed.</p></div></div>
     <div class="step"><div class="step-num">2</div><div class="step-content"><h3>We confirm and quote</h3><p>Usually within two hours during business hours. We will let you know the price and arrange a time.</p></div></div>
     <div class="step"><div class="step-num">3</div><div class="step-content"><h3>You bring the original document, together with any required copies</h3><p>To our agreed location in Dubai.</p></div></div>
     <div class="step"><div class="step-num">4</div><div class="step-content"><h3>Same-day completion, cash on collection</h3><p>Most documents are certified, attested or witnessed during the appointment, in under fifteen minutes. Cash paid when you collect. No invoicing, no card payments.</p></div></div>
@@ -169,7 +189,7 @@
 <section>
   <div class="section-label">FAQ</div>
   <h2>Common questions</h2>
-  <p>Quick answers about UK document certification, attestation and witnessing in Dubai. If your question is not here, message us using the Contact Us tab.</p>
+  <p>Quick answers about UK document certification, attestation and witnessing in Dubai. If your question is not here, message us on WhatsApp or send us the details using the contact form below.</p>
   <div class="faq-list">
     <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do I need a UK-qualified solicitor, or will a UAE notary do?<span class="faq-icon">+</span></button><div class="faq-answer">For most UK documents including ID1 forms, HM Land Registry transfers, applications to HMRC, and LPAs registered with the Office of the Public Guardian, you will need a UK qualified solicitor. UAE notaries, MOFA attestation and Hague apostilles are not accepted in place of UK solicitor certification.</div></div>
     <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How long does it take, and what do I need to bring?<span class="faq-icon">+</span></button><div class="faq-answer">Same-day in most cases. Many documents are completed during the appointment in under fifteen minutes. Please bring the original document and any other documents relevant to the required certification. For ID1 forms, please bring the unfilled form with you so we can complete it together.</div></div>
@@ -181,6 +201,7 @@
     <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Are you regulated, and can you advise me on my situation?<span class="faq-icon">+</span></button><div class="faq-answer">Yes, we are regulated by the Solicitors Regulation Authority (SRA) of England and Wales. We provide document services only. We do not advise on UK property law, immigration, family law, tax or any other legal matter. For legal advice on your circumstances, please consult a practising solicitor in the UK.</div></div>
   </div>
   <a href="#contact" class="cta-btn" style="margin-top:2rem;display:inline-block">Contact Us</a>
+<a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." class="wa-btn" target="_blank" rel="noopener" style="margin-top:2rem" onclick="waClick('faq_section')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.463 3.488"/></svg><span>WhatsApp Us</span></a>
 </section>
 <div style="background:rgba(255,255,255,0.03);padding:1px 0">
 <section>
@@ -188,16 +209,23 @@
     <div class="contact-img"><img src="https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/infinite-images/708ffb33-a510-4e26-bf69-a1b4d1a858ed-UtJ1P1Lc4dojUINdqoNLLsHvTu4kP3.png" alt="UK solicitor in professional office"></div>
     <div class="contact-info">
       <h2>Get in touch</h2>
-      <p>Use the Contact Us button to get in touch. We reply to all messages within two hours during business hours.</p>
-      <p class="contact-detail"><strong>Email:</strong> britcertifications@gmail.com</p>
+      <p>Message us on WhatsApp for the fastest reply, or use the contact form below. We reply to all messages within two hours during business hours.</p>
+      <p class="contact-detail"><strong>WhatsApp:</strong> <a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." target="_blank" rel="noopener" onclick="waClick('contact_detail')" style="color:#25D366;text-decoration:none;font-weight:700">+44 7343 054419</a></p>
+<p class="contact-detail"><strong>Email:</strong> britcertifications@gmail.com</p>
       <p class="contact-detail"><strong>Location:</strong> Dubai (various). Exact meeting point shared on confirmation.</p>
+<a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." class="wa-btn" target="_blank" rel="noopener" style="margin-left:0" onclick="waClick('contact_section')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.463 3.488"/></svg><span>Message us on WhatsApp</span></a>
     </div>
   </div>
 </section>
 </div>
 <div id="contact">
   <div class="form-section">
-    <div class="tally-wrapper">
+    <div class="wa-choice">
+<p><strong>Prefer WhatsApp?</strong> Message us directly and we will reply within two hours during business hours.</p>
+<a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." class="wa-btn" target="_blank" rel="noopener" onclick="waClick('form_section')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.463 3.488"/></svg><span>Chat on WhatsApp</span></a>
+</div>
+<p class="form-intro">Or send us the details using the form below:</p>
+<div class="tally-wrapper">
       <iframe src="https://tally.so/embed/81rJJ5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Contact Form"></iframe>
     </div>
   </div>
@@ -219,6 +247,10 @@ function toggleFaq(btn) {
   document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
   if (!isOpen) item.classList.add('open');
 }
+</script>
+<a href="https://wa.me/447343054419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20UK%20document%20certification%20in%20Dubai." class="wa-float" target="_blank" rel="noopener" aria-label="Message us on WhatsApp" onclick="waClick('float')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.463 3.488"/></svg></a>
+<script>
+function waClick(loc) { if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', { 'location': loc }); } }
 </script>
 </body>
 </html>
